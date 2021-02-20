@@ -1,0 +1,6 @@
+ARG MONGODB_VERSION
+
+PKG mongodb${MONGODB_VERSION}
+CONFIG set allow.mlock
+SYSRC mongod_enable=YES
+SERVICE mongod start
